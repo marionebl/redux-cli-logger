@@ -34,6 +34,7 @@ export default function createCLILogger (options) {
     actionColor = 'bright-blue',
     nextColor = 'green',
     predicate = null,
+    console = console,
     stateTransformer = (x) => x,
     actionTransformer = (x) => x
   } = options
@@ -102,6 +103,7 @@ export default function createCLILogger (options) {
     `)
 
     console.log(output)
+
     return returnValue
   }
 }

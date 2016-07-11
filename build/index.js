@@ -49,6 +49,8 @@ function createCLILogger(options) {
   var nextColor = _options$nextColor === undefined ? 'green' : _options$nextColor;
   var _options$predicate = options.predicate;
   var predicate = _options$predicate === undefined ? null : _options$predicate;
+  var _options$console = options.console;
+  var console = _options$console === undefined ? console : _options$console;
   var _options$stateTransfo = options.stateTransformer;
   var stateTransformer = _options$stateTransfo === undefined ? function (x) {
     return x;
@@ -112,6 +114,7 @@ function createCLILogger(options) {
         var output = kid.render('\n      <message>\n        ' + message + '\n      </message>\n      <ul>\n        <li><prev>prev state</prev></li>\n        <pre><prev>' + prevState + '</prev></pre>\n\n        <li><action>action</action></li>\n        <pre><action>' + actionDisplay + '</action></pre>\n\n        <li><next>next</next></li>\n        <pre><next>' + nextState + '</next></pre>\n      </ul>\n    ');
 
         console.log(output);
+
         return returnValue;
       };
     };
